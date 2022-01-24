@@ -1,0 +1,14 @@
+<div id="clock"></div>
+<style>
+#clock {
+
+}
+</style>
+<script src="https://moment.github.io/luxon/global/luxon.js"></script>
+<script>
+const d = document.getElementById('clock');
+setInterval(() => {
+  d.innerHTML = window.luxon.DateTime.now().setLocale('ko').toFormat('yyyy-MM-dd HH:mm:ss');
+}, 500);
+</script>
+
